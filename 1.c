@@ -10,7 +10,7 @@ void createSon();
 
 int main(int argc, char*argv[]){
   int arg= atoi(argv[1]);
-  printf("dad: %d\n", getpid());
+  printf("PID: %d\n", getpid());
   createSon(arg, arg);
   return 0;
 }
@@ -23,11 +23,11 @@ void createSon(int count, int arg){
     for(int i=arg; i>=count; i--){
       printf("\t");
     }
-    printf("dad: %d\n", getppid());
+    printf("PID: %d\n", getppid());
     for(int i=arg; i>=count; i--){
       printf("\t");
     }
-    printf("son: %d\n", getpid());
+    printf("PID: %d\n", getpid());
   }else{
     wait(NULL);
   }
