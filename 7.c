@@ -87,11 +87,19 @@ void *funcionThreadOrdenarIzquierda (void *args){
 //FUNCION PEDIR
 void *funcionThreadPedir(void *args){
     printf("Introduzca la cantidad de numeros a ingresar(no mayor a 100): ");
-    scanf("%d", &cantidad);
+    do{
+        scanf("%d", &cantidad);
+        if(cantidad>100){
+            printf("Numero ingresado es mayor a 100, ingreselo de nuevo\n");
+        }
+    }while(cantidad>100);
+    
 
     for(int i= 0;i<cantidad;i++){
-        printf("ingrese numero: ");
-        scanf("%d", &numero);
+
+        printf("ingrese numero en posicion %i: ", i);
+        scanf("%d", &numero);       
+
         Arreglo[i]=numero;
     }
 
