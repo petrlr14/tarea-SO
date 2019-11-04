@@ -16,7 +16,7 @@ int main(void){
     char delim[1];
     delim[0]=' ';
     pid_t pid; 
-    puts("Bienvenido/a a la consola pirata v0.9 \n");
+    puts("Bienvenido/a a la consola pirata v0.9 \nUtilice Ctrl + C para salir\n");
     printf("so@agave -> ");
     while (1){
         fgets(buf, sizeof(char *), stdin);
