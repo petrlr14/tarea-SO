@@ -36,6 +36,7 @@ int main(void){
             printf("so@agave -> ");
         }
         free(buf);
+        c=0;
     }
     puts("Saliendo de la consola pirata v0.9"); 
     return 0;
