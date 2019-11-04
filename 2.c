@@ -47,14 +47,14 @@ int main(int argc, char *argv[]){
 //Se convierte el valor ingresado a entero
         int n = atoi(argv[1]);
         if(n>=0){
-            printf("El valor ingresado es: %d \nEl resultado del factorial es: %d\n", n, factorial(n));
+            fprintf(stderr, "El valor ingresado es: %d \nEl resultado del factorial es: %d\n", n, factorial(n));
         }
         else{
-            printf("Argumento ingresado invalido, el numero debe de ser mayor a 0\n");
+            fprintf(stderr, "Argumento ingresado invalido, el numero debe de ser mayor a 0\n");
         }
     }else if (argc < 2)
     {
-        printf("Falta argumento(s)");
+        fprintf(stderr, "Falta argumento(s)");
     }
     printf("********************** Fin **********************\n");
     return 0;
